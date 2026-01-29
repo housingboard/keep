@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -exu
+
 # for landscape just insert page as is it
 # for portrait insert page after rotation
 
