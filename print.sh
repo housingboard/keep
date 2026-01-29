@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# for landscape just insert page as is it
+# for portrait insert page after rotation
 
 # File name
 PDF_FILE="print.pdf"
