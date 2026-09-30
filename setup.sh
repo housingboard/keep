@@ -1,2 +1,2 @@
 apt update
-apt install qpdf texlive-extra-utils
+apt install php qpdf texlive-extra-utils
