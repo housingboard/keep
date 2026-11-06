@@ -34,6 +34,6 @@ qpdf $PPDF_FILE --pages . z-1:odd -- tmp/aside2.pdf
 
 ln -sfT aside1.pdf final/output_odd.pdf
 #ln -sfT aside2.pdf final/output_even.pdf
-ln -sfT final/aside2.pdf final/output_even_reversed.pdf
+ln -sfT aside2.pdf final/output_even_reversed.pdf
 
 echo Final_q_pdfs generated
