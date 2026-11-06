@@ -11,7 +11,7 @@ PAGE_ORDER=$(php book.php "$PAGE_COUNT" sbook)
 pdfjam sbook.pdf "$PAGE_ORDER" -o sbooked.pdf
 
 #pdfjam --nup 2x1 --landscape --delta "1cm 0cm" --pagecommand '\thispagestyle{plain}'  booked.pdf -o print.pdf
-pdfjam --nup 2x2  --delta "1cm 0cm" --pagecommand '' \
+pdfjam --nup 2x2 --pagecommand '' \
   sbooked.pdf -o book.pdf
 
 
