@@ -20,8 +20,17 @@ case $1 in
 	./print.sh
 
         ;;
-    no | n)
-        echo "Cancelled"
+    s8)
+        cp input/sbook.pdf input/book.pdf   
+	./book.sh
+	PAGE_COUNT=$(qpdf --show-npages input/print.pdf)
+	PAGE_ORDER=$(php book.php "$PAGE_COUNT" s8)
+	pdfjam input/print.pdf "$PAGE_ORDER" --fitpaper true -o tmp/sbooked.pdf
+	
+	pdfjam --nup 2x2 --landscape --pagecommand '' \
+	  tmp/sbooked.pdf -o input/print.pdf
+	  
+	./print.sh
         ;;
     *)
       

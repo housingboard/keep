@@ -45,7 +45,7 @@ if($action=="sbook")
 
 	}
 }
-if($action=="s4")
+elseif($action=="s4")
 {
 		
 	for($i=0;$i<$nz;$i++)
@@ -54,6 +54,34 @@ if($action=="s4")
 		goon($tz-2*$i);
 		goon(2*$i+2);
 		goon($tz-2*$i-1);
+	}
+}
+elseif($action=="s8")
+{
+	$rem=$total%8;
+	$nz=(int)($total/8);
+	if($rem>0)
+	{
+		$nz++;
+	}
+	$t8z=8*$nz;
+	$t4z=4*$nz;
+
+	for($i=0;$i<$nz;$i++)
+	{
+		$ic=$i*2;
+		
+		goon($ic+1);
+		goon($t4z-$ic);
+		goon($t8z-$ic);
+		goon($t4z+$ic+1);
+		
+		
+		goon($t4z-$ic-1);
+		goon($ic+2);
+		goon($t4z+$ic+2);
+		goon($t8z-$ic-1);
+		
 	}
 }
 else
