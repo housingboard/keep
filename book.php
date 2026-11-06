@@ -45,6 +45,17 @@ if($action=="sbook")
 
 	}
 }
+if($action=="s4")
+{
+		
+	for($i=0;$i<$nz;$i++)
+	{
+		goon(2*$i+1);
+		goon($tz-2*$i);
+		goon(2*$i+2);
+		goon($tz-2*$i-1);
+	}
+}
 else
 {
 	for($i=0;$i<$nz;$i++)
