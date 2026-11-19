@@ -40,11 +40,11 @@ case $1 in
 	PAGE_ORDER=$(php book.php "$PAGE_COUNT" sbook)
 	#php book.php $PAGE_COUNT
 
-	pdfjam sbook.pdf "$PAGE_ORDER" -o tmp/sbooked.pdf
+	pdfjam input/sbook.pdf "$PAGE_ORDER" -o tmp/sbooked.pdf
 
 	#pdfjam --nup 2x1 --landscape --delta "1cm 0cm" --pagecommand '\thispagestyle{plain}'  booked.pdf -o print.pdf
 	pdfjam --nup 2x2 --pagecommand '' \
-	  tmp/sbooked.pdf -o book.pdf
+	  tmp/sbooked.pdf -o input/book.pdf
 
 
 	./book.sh
